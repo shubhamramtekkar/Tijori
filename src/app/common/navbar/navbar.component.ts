@@ -10,8 +10,12 @@ export class NavbarComponent implements OnInit {
   cartCount = 0;
 
   constructor(private commonService: CommonService) {
-    this.commonService.getClickEvent().subscribe(() => {
-      this.getCartData();
+    this.commonService.getClickEvent().subscribe((res) => {
+      if(res =='add'){
+        this.getCartData();
+      }else if(res =='clear'){
+        this.cartCount = 0;
+      }
     });
   }
 

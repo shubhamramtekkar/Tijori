@@ -12,6 +12,6 @@ export class Page1Component implements OnInit {
   ngOnInit(): void {}
 
   addToCart() {
-    this.commonService.sendClickEvent();
+    this.commonService.sendClickEvent('add');
   }
 }

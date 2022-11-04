@@ -11,6 +11,7 @@ import { Page2Component } from './page2/page2.component';
 import { Page3Component } from './page3/page3.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
     Page2Component,
     Page3Component,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

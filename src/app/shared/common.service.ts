@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CommonService {
-  private subject = new Subject<any>();
+  private subject = new BehaviorSubject<any>('');
 
-  sendClickEvent() {
-    this.subject.next(null);
+  sendClickEvent(ev:any) {
+    this.subject.next(ev);
   }
 
   getClickEvent(): Observable<any> {
